@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,26 +6,31 @@
   <title>ChampiNews - Sté Mycologique de Provence</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
   <header class="header">
     <div class="container">
       <img src="img/smp-logo.gif" alt="Logo SMP" class="logo" />
       <nav class="nav">
-        <a href="https://champinews.fr/smp/">SMP</a>
-        <a href="https://champinews.fr/news/news-2.html">Blog</a>
-        <a href="https://mycofamm.fr/">FAMM</a>
-        <a href="https://champinews.fr/quizz/quizmenu.htm">Quiz</a>
-        <a href="https://champinews.fr/livredor/livredor/livre_or.php">Vos commentaires</a>
-        <a href="#contact">Contact</a>
+        <a href="https://champinews.fr/smp/">🍄 SMP</a>
+        <a href="https://champinews.fr/news/news-2.html">📢 Blog</a>
+        <a href="https://mycofamm.fr/">🌐 FAMM</a>
+        <a href="https://champinews.fr/quizz/quizmenu.htm">🧠 Quiz</a>
+        <a href="https://champinews.fr/livredor/livredor/livre_or.php">💬 Vos commentaires</a>
+        <a href="#contact">✉️ Contact</a>
       </nav>
     </div>
   </header>
 
-  <section id="hero">
+  <section id="hero" class="parallax-hero">
     <div class="hero-overlay">
       <h1>Bienvenue sur ChampiNews</h1>
       <p>Le site de la Société Mycologique de Provence</p>
+      <div class="cta-buttons">
+        <a href="https://champinews.fr/smp/#adhesion" class="btn btn-primary">Rejoindre la SMP</a>
+        <a href="https://champinews.fr/smp/#evenements" class="btn btn-secondary">Découvrir nos événements</a>
+      </div>
     </div>
     <div class="slider-container">
       <img src="img/1.jpg" alt="Champignon 1">
@@ -53,14 +57,32 @@
   </section>
 
   <main>
-    <section id="intro" class="section">
+    <section id="intro" class="section reveal">
       <div class="container">
         <h2>Qui sommes-nous ?</h2>
         <p>La Sté Mycologique de Provence (SMP) est une association passionnée par la découverte, l'étude et la préservation des champignons de notre région. Rejoignez-nous pour des sorties, ateliers et partages de connaissance.</p>
       </div>
     </section>
 
-    <section id="actus" class="section bg-light">
+    <section id="stats" class="section stats-section reveal">
+        <div class="container">
+          <h2>Notre communauté en chiffres</h2>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-number" data-target="120">0</span>
+              <p>champignons répertoriés</p>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="30">0</span>
+              <p>membres actifs</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+    <section id="actus" class="section bg-light reveal">
       <div class="container">
         <h2>Actualités</h2>
         <div class="cards">
@@ -76,15 +98,42 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="galerie" class="section reveal">
+      <div class="container">
+        <h2>Dernières sorties en images</h2>
+        <div class="gallery-marquee">
+          <div class="gallery-track">
+            <img src="img/sortie1.jpeg" alt="Sortie forêt 1" />
+            <img src="img/sortie2.jpeg" alt="Sortie forêt 2" />
+            <img src="img/sortie3.jpeg" alt="Sortie forêt 3" />
+            <img src="img/sortie4.jpeg" alt="Sortie forêt 4" />
+            <img src="img/sortie5.jpeg" alt="Sortie forêt 5" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
       <div class="container">
         <h2>Nous contacter</h2>
         <form class="contact-form">
-          <input type="text" placeholder="Votre nom" required>
-          <input type="email" placeholder="Votre email" required>
-          <textarea placeholder="Votre message" rows="5" required></textarea>
-          <button type="submit">Envoyer</button>
-        </form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" rows="5" required></textarea>
+          
+            <label class="checkbox-group">
+              <input type="checkbox" name="newsletter" />
+              Je souhaite recevoir la newsletter
+            </label>
+          
+            <div class="captcha">
+              <label for="captcha">Combien font 3 + 4 ?</label>
+              <input type="text" id="captcha" name="captcha" required />
+            </div>
+          
+            <button type="submit">Envoyer mon message 🍄</button>
+          </form>
+          
       </div>
     </section>
   </main>
@@ -96,5 +145,6 @@
   </footer>
 
   <script src="js/slider.js"></script>
+
 </body>
 </html>
